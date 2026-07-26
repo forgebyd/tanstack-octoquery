@@ -1,0 +1,59 @@
+# ----------------------------------------------------------------------
+# Line Endings & Text Auto-detection
+# ----------------------------------------------------------------------
+# Auto-detect text files and normalize line endings to LF on check-in
+* text=auto
+
+# Explicitly declare text files to always use LF (Linux/macOS style) on checkout
+*.cs        text eol=lf
+*.go        text eol=lf
+*.java      text eol=lf
+*.js        text eol=lf
+*.jsx       text eol=lf
+*.ts        text eol=lf
+*.tsx       text eol=lf
+*.html      text eol=lf
+*.css       text eol=lf
+*.scss      text eol=lf
+*.json      text eol=lf
+*.md        text eol=lf
+*.txt       text eol=lf
+*.yml       text eol=yaml
+*.yaml      text eol=yaml
+
+# Explicitly declare Windows batch files to use CRLF on checkout
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+
+# ----------------------------------------------------------------------
+# Binary Files (Never modify line endings, treat as opaque chunks)
+# ----------------------------------------------------------------------
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.mov       binary
+*.mp4       binary
+*.mp3       binary
+*.wav       binary
+*.pdf       binary
+*.zip       binary
+*.gz        binary
+
+# ----------------------------------------------------------------------
+# Git LFS (Large File Storage) Configurations
+# ----------------------------------------------------------------------
+# Uncomment these if you use Git LFS for heavy design or media assets
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.zip filter=lfs diff=lfs merge=lfs -text
+# *.mp4 filter=lfs diff=lfs merge=lfs -text
+
+# ----------------------------------------------------------------------
+# Export Management
+# ----------------------------------------------------------------------
+# Ignore these files when creating an archive using `git archive`
+.gitattributes export-ignore
+.gitignore    export-ignore
+.gitmodules   export-ignore
+/tests        export-ignore
